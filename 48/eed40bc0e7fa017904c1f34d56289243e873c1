@@ -1,0 +1,27 @@
+.npmrc
+  s_2bd13baa8199ca::t_c5a4e3ace796a9 1-2
+examples/svelte-kit/package.json
+  s_2bd13baa8199ca::t_940852ed8f67c5 7-9,22
+examples/svelte-kit/vite.config.ts
+  s_2bd13baa8199ca::t_1455105b6a43e0 2
+package.json
+  s_2bd13baa8199ca::t_a70f896ebdacad 181,186,189,236
+pnpm-workspace.yaml
+  s_2bd13baa8199ca::t_349416917d8de3 7,9-11,16,27-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "48eed40bc0e7fa017904c1f34d56289243e873c1",
+  "prompts": {},
+  "sessions": {
+    "s_2bd13baa8199ca": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5e58e992-7909-4e0f-8306-0782d1a04c0e",
+        "model": "claude-opus-5"
+      },
+      "human_author": "MK <fengmk2@gmail.com>"
+    }
+  }
+}
