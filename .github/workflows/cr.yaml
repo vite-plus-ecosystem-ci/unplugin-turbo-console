@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup Vite+
-        uses: voidzero-dev/setup-vp@v1
+        uses: voidzero-dev/setup-vp@v1.20.0
         with:
           node-version: 22
           cache: true
@@ -25,4 +25,5 @@ jobs:
       - name: Build
         run: vp pack
 
-      - run: vp dlx pkg-pr-new publish
+      - if: ${{ github.repository_owner != 'vite-plus-ecosystem-ci' }}
+        run: vp dlx pkg-pr-new publish
