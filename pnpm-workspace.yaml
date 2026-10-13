@@ -9,15 +9,16 @@ catalog:
 
 catalogs:
   vite-plus:
-    'vite': 'npm:@voidzero-dev/vite-plus-core@0.3.3'
-    'vite-plus': '0.3.3'
-    'vitest': '4.1.11'
+    'vite': npm:@voidzero-dev/vite-plus-core@0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3
+    'vite-plus': 0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3
+    'vitest': 5.0.4
+    '@vitest/ui': 5.0.4
 
 ignoreWorkspaceRootCheck: true
 
 overrides:
-  vite: 'catalog:vite-plus'
-  vitest: 'catalog:vite-plus'
+  vite@*: catalog:vite-plus
+  vitest@*: catalog:vite-plus
 
 shamefullyHoist: true
 allowBuilds:
@@ -26,3 +27,21 @@ allowBuilds:
   esbuild: true
   sharp: true
   vue-demi: true
+peerDependencyRules:
+  allowAny:
+    - vite
+    - vitest
+  allowedVersions:
+    vite: '*'
+    vitest: '*'
+minimumReleaseAgeExclude:
+  - '@voidzero-dev/vite-plus-core@0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3'
+  - '@voidzero-dev/vite-plus-darwin-arm64@0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3'
+  - '@voidzero-dev/vite-plus-darwin-x64@0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3'
+  - '@voidzero-dev/vite-plus-linux-arm64-gnu@0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3'
+  - '@voidzero-dev/vite-plus-linux-arm64-musl@0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3'
+  - '@voidzero-dev/vite-plus-linux-x64-gnu@0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3'
+  - '@voidzero-dev/vite-plus-linux-x64-musl@0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3'
+  - '@voidzero-dev/vite-plus-win32-arm64-msvc@0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3'
+  - '@voidzero-dev/vite-plus-win32-x64-msvc@0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3'
+  - vite-plus@0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3
