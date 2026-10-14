@@ -25,4 +25,8 @@ jobs:
       - name: Build
         run: vp pack
 
-      - run: vp dlx pkg-pr-new publish
+      # Ecosystem-ci smoke test: publishing a preview package needs a GitHub App or
+      # token the fork does not have, and it does not exercise the pinned Vite+.
+      - name: Run vp dlx pkg-pr-new publish
+        if: ${{ github.repository_owner != 'vite-plus-ecosystem-ci' }}
+        run: vp dlx pkg-pr-new publish
