@@ -9,15 +9,16 @@ catalog:
 
 catalogs:
   vite-plus:
-    'vite': 'npm:@voidzero-dev/vite-plus-core@0.3.3'
-    'vite-plus': '0.3.3'
-    'vitest': '4.1.11'
+    'vite': npm:@voidzero-dev/vite-plus-core@0.0.0-commit.3b99001a24f162be6a4478c3b97f3d0eb81c96c8
+    'vite-plus': 0.0.0-commit.3b99001a24f162be6a4478c3b97f3d0eb81c96c8
+    'vitest': 5.0.4
+    '@vitest/ui': 5.0.4
 
 ignoreWorkspaceRootCheck: true
 
 overrides:
-  vite: 'catalog:vite-plus'
-  vitest: 'catalog:vite-plus'
+  vite@*: catalog:vite-plus
+  vitest@*: catalog:vite-plus
 
 shamefullyHoist: true
 allowBuilds:
@@ -42,3 +43,10 @@ minimumReleaseAgeExclude:
   - yuku-parser
   - '@yuku-core/*'
   - '@yuku-toolchain/*'
+peerDependencyRules:
+  allowAny:
+    - vite
+    - vitest
+  allowedVersions:
+    vite: '*'
+    vitest: '*'
